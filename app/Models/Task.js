@@ -17,7 +17,9 @@ export default class Task{
     <input type="checkbox" aria-label="Checkbox for following text input" onclick="app.tasksController.checkTask('${this.id}','${this.listId}')" ${this.checked}>
       <div >${this.name} <i class="fas fa-times text-danger" onclick="app.tasksController.deleteTask('${this.id}','${this.listId}')"></i></div>
       </li>
-      
+
     `
+    // Ternary to replace this.checked above
+    //this.complete ? checked: ''
   }
 }
