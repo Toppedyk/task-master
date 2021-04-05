@@ -13,13 +13,13 @@ export default class Lists{
 
   get Template(){
     return `
-    <div class="col-md-4">
+    <div class="col-md-4 my-2">
     <div class="pizza-card shadow bg-white rounded">
         <div class="text-center p-2 d-flex justify-content-between bg-${this.color}">
             <h3>${this.name}</h3>
             <i class="fas fa-times ml-2" onclick = "app.listsController.deleteList('${this.id}')"></i>
         </div>
-        <div id = "count">
+        <div id = "count" class='text-center'>
         ${this.completedTasks}/${this.totalTasks}
         </div>
         <div class="p-3">

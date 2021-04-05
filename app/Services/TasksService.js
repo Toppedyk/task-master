@@ -14,7 +14,13 @@ class TasksService {
 
   deleteTask(id, listId){
     let total = ProxyState.lists.find(c => c.id == listId)
+    let complete = ProxyState.tasks.find(t => t.id == id)
     total.totalTasks--
+    console.log(complete)
+    if(complete.complete==true){
+      total.completedTasks--
+      console.log('test')
+    }
     console.log(total)
     ProxyState.tasks = ProxyState.tasks.filter(l => l.id != id)
     saveState()

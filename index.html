@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <header class='container-fluid'>
+    <header class='container-fluid text-center'>
         <nav class="navbar navbar-dark navbar-expand bg-dark text-light row">
             <a class="navbar-brand col-12" href="#">
                 <h1 class="ml-2">task-master</h1>
@@ -23,10 +23,10 @@
     </header>
 
 
-    <main class='container-fluid'>
+    <main class='container-fluid bg-primary'>
     <div class="row flex-direction-row">
-        <form class="form-inline col-12" onsubmit="app.listsController.addList()">
-            <div class="form-group mb-2">
+        <form class="form-inline col-12 align-items-baseline justify-content-center" onsubmit="app.listsController.addList()">
+            <div class="form-group my-2">
                 <label for="listName" class="sr-only">List Name</label>
                 <input type="text" class="form-control" id="listName" placeholder="List Name..." required minlength="3" maxlength="15" autocomplete="off">
             </div>
@@ -39,7 +39,7 @@
                     <option>gray</option>
                   </select>
             </div>
-            <button type="submit" class="btn btn-primary mb-2">Create</button>
+            <button type="submit" class="btn btn-success mb-2">Create</button>
           </form>
     </div>
 

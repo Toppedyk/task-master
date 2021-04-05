@@ -13,9 +13,9 @@ export default class Task{
   get Template(){
     return `    
     <li>
-    <div class="input-group-text d-flex ">    
+    <div class="input-group-text d-flex justify-content-between">    
     <input type="checkbox" aria-label="Checkbox for following text input" onclick="app.tasksController.checkTask('${this.id}','${this.listId}')" ${this.checked}>
-      <div class="ml-5">${this.name} <i class="fas fa-times ml-5 text-danger" onclick="app.tasksController.deleteTask('${this.id}','${this.listId}')"></i></div>
+      <div >${this.name} <i class="fas fa-times text-danger" onclick="app.tasksController.deleteTask('${this.id}','${this.listId}')"></i></div>
       </li>
       
     `
